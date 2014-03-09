@@ -22,6 +22,16 @@ public class MarinControler implements Serializable {
 	public void create() {
 		Long id = marinEJB.createMarin(marin) ;
 		System.out.println("Marin persisté : " + id) ;
+		
+		@SuppressWarnings("unchecked")
+	public void delete() {
+		
+		marins= marinEJB.deleteMarin(marin);
+		System.out.println("Marin persistÃ© : " + marin.getNom()) ;
+		
+	}
+	
+		
 	}
 	
 	public Marin getMarin() {
